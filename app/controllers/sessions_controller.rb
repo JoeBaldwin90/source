@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
 
+  def new
+    # Nothing else needed because we're
+    # not adding anything to a database
+  end
 
   def destroy
     # Log-out by removing session completely with Rails' "reset_session" method
