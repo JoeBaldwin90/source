@@ -1,1 +1,24 @@
+<<<<<<< HEAD
 
+=======
+.button {
+  width: 100px;
+  color: #333;
+  font-size: 1rem;
+  padding: 2px 15px;
+  margin-right: 5px;
+  border: #32668660 2px solid;
+  border-radius: 100px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #326686;
+    color: #fff;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+>>>>>>> 2697ab821bf491443d4e5aa33c9398d171db66d5
