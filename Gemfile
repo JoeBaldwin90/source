@@ -5,8 +5,16 @@ ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# Use sqlite3 as the database for Active Record in development mode
+group :development do
+  gem 'sqlite3'
+end
+# Use postgres as the database for Active Record in production mode
+group :production do
+  gem 'pg'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -25,10 +33,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+# Admin panel
+gem 'activeadmin'
+gem 'devise'
+
+# Form and view gems
+gem 'simple_form'
+gem 'active_link_to'
+
+# Image hosting/uploading
+gem 'carrierwave', '~> 1.0'
+gem 'fog-aws'
+gem 'mini_magick', '~> 4.8'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
