@@ -4,9 +4,17 @@
 }
 
 body {
-text-align: center;
+  text-align: center;
 }
 
 h1 {
   font-size: 32px;
+}
+
+.success {
+  background-color: #326686;
+  color: #fff;
+  width: 100%;
+  height: 2.5em;
+  padding: 10px;
 }
