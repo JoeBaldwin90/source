@@ -20,7 +20,9 @@
       <h1>Source</h1>
 
       <nav>
-        Username: <%= @current_user.username %>
+        <% if is_logged_in? %>
+          Username: <%= @current_user.username %>
+        <% end %>
       </nav>
     </header>
 

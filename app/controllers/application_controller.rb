@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
 
-  # Make current_user method available in views
-  helper_method :current_user
+  # Make these methods available in views
+  helper_method :current_user, :is_logged_in?
 
   # Run this on every page before any action
   before_action :current_user
 
   def current_user
-    if session[:user_id].present?
+    if is_logged_in?
       @current_user = User.find(session[:user_id])
     else
       @current_user = nil
@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
     @current_user # Return something to use
   end
 
-
+  def is_logged_in?
+    session[:user_id].present?
+  end
 
 end
