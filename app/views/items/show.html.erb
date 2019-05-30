@@ -1,0 +1,11 @@
+<h2>
+  <%= @item.title %>
+</h2>
+
+<div class="image">
+  <%= image_tag @item.image.medium.to_s %>
+</div>
+
+<p class="image-description">
+  <%= simple_format @item.description %>
+</p>
