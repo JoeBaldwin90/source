@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 
 # Use sqlite3 as the database for Active Record in development mode
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
 end
 # Use postgres as the database for Active Record in production mode
 group :production do
