@@ -36,6 +36,8 @@
 
 .content {
   margin-bottom: 50px;
+  padding: 0 20px;
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -59,7 +61,7 @@
 
 .box {
   border: 1px solid $black;
-  width: calc(50% - 50px);
+  width: 50%;
   height: 400px;
   padding: 20px;
   &:first-of-type {
