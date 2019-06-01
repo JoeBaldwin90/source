@@ -12,7 +12,6 @@ $white: #F8F8F8;
 
 // Global elements
 body {
-  text-align: center;
   font-family: $bodyFont;
   line-height: 1.5;
   color: $black;
@@ -20,11 +19,9 @@ body {
 
 a, p {
   color: $white;
-  text-align: left;
 }
 
 h1, h2, h3 {
-  text-align: left;
   font-family: $titleFont;
 }
 

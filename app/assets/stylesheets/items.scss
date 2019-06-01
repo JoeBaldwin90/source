@@ -1,3 +1,4 @@
+// Items index page
 div.items-grid {
   padding: 20px;
   display: grid;
@@ -37,5 +38,17 @@ div.items-grid {
     p {
       margin: 0.5em 0 0 0;
     }
+  }
+}
+
+// Item show PagesController
+div.item-page {
+  img {
+    max-width: 70%;
+  }
+
+  h1, p, a {
+    color: $black;
+    max-width: 650px;
   }
 }

@@ -1,13 +1,13 @@
-<div class="container">
-<h2>
-  <%= @item.title %>
-</h2>
+<div class="container item-page">
 
-<div class="image">
-  <%= image_tag @item.image.medium.to_s %>
-</div>
+  <h1><%= @item.title %></h1>
 
-<p class="image-description">
+  <%= image_tag @item.image.url %>
+
   <%= simple_format @item.description %>
-</p>
+
+  <p>
+    <%= link_to "Download photo", @item.image.url, download: true, target: "blank" %>
+  </p>
+
 </div>
