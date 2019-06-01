@@ -1,33 +1,68 @@
-* {
-  font-family: helvetica;
-  line-height: 1.5;
-}
+// Fonts: Saria / Montserrat
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,600|Saira:300,400,600&display=swap');
 
+$titleFont: "Saira";
+$bodyFont: "Montserrat"; // Extended font styles
+
+// Colors
+$green: #7BBF8E;
+$darkgreen: #4D7859;;
+$black: #2E2E2E;
+$white: #F8F8F8;
+
+// Global elements
 body {
   text-align: center;
-  padding: 5px 20px;
+  font-family: $bodyFont;
+  line-height: 1.5;
+  color: $black;
 }
 
+a, p {
+  color: $white;
+  text-align: left;
+}
+
+h1, h2, h3 {
+  text-align: left;
+  font-family: $titleFont;
+}
+
+// Page header
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: $black;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-box-shadow: 4px 4px 10px $black;
+          box-shadow: 4px 4px 10px $black;
 }
 
-h1 {
-  font-size: 32px;
+.home {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: $green;
+  letter-spacing: -4px;
+  cursor: pointer;
 }
 
-form div {
-  margin-bottom: 10px;
+.nav-el {
+  display: inline-block;
+  margin-right: 20px;
 }
 
+// Flash message styling
 .success {
   background-color: #326686;
   color: #fff;
@@ -36,23 +71,51 @@ form div {
   padding: 10px;
 }
 
+.error {
+
+}
+
+// Buttons & links
 .button {
   min-width: 100px;
-  color: #333;
+  color: $white;
   font-size: 1rem;
   padding: 2px 15px;
   margin-right: 5px;
-  border: #32668660 2px solid;
+  border: $green 2px solid;
   border-radius: 100px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: #326686;
-    color: #fff;
+    background-color: $darkgreen;
   }
 
   &:last-of-type {
     margin-right: 0;
   }
+}
+
+.button.active {
+  background-color: $green;
+  &:hover {
+    background-color: $darkgreen;
+  }
+}
+
+.link {
+  &:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid $green;
+  }
+}
+
+// Content-wrapper
+.container {
+  margin-top: 72px;
+}
+
+// Form styling
+form div {
+  margin-bottom: 10px;
 }

@@ -17,16 +17,21 @@
     <% end %>
 
     <header>
-      <h1>Source</h1>
+      <h1>
+        <%= link_to "Source", root_path, class: "home" %>
+      </h1>
 
       <nav>
         <% if is_logged_in? %>
-          Hi, <%= @current_user.username %>!
-          <%= link_to "Log out", session_path, class: "button", method: :delete %>
+          <p class="nav-el">
+            Hi, <%= link_to @current_user.username, users_path, class: "link" %>!
+          </p>
+          <%= link_to "Gallery", items_path, class: "link nav-el active" %>
+          <%= link_to "Log out", session_path, class: "button nav-el", method: :delete %>
         <% else %>
           <div class="sign-up">
-            <%= link_to "Sign up", new_user_path, class: "button" %>
-            <%= link_to "Log in", new_session_path, class: "button button-outline" %>
+            <%= link_to "Sign up", new_user_path, class: "button nav-el active" %>
+            <%= link_to "Log in", new_session_path, class: "button nav-el" %>
           </div>
         <% end %>
       </nav>

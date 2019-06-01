@@ -1,9 +1,11 @@
-<h2>
-  <%= item.title %>
-</h2>
+<div class="image-content">
+
+<%= image_tag item.image.medium.to_s %>
 
 <%= link_to item_path(item) do %>
-  <div class="image">
-    <%= image_tag item.image.medium.to_s %>
-  </div>
+  <h2>
+    <%= item.title %>
+  </h2>
 <% end %>
+
+</div>
