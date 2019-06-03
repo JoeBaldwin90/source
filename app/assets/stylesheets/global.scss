@@ -17,8 +17,8 @@ body {
   color: $black;
 }
 
-a, p {
-  color: $white;
+a {
+  color: $black;
 }
 
 h1, h2, h3 {
@@ -57,6 +57,7 @@ header {
 .nav-el {
   display: inline-block;
   margin-right: 20px;
+  color: $white;
 }
 
 // Flash message styling
@@ -101,10 +102,18 @@ header {
   }
 }
 
-.link {
+.nav-link {
+  color: $white;
   &:hover {
     padding-bottom: 3px;
     border-bottom: 2px solid $green;
+  }
+}
+
+.link {
+  color: $black;
+  &:hover {
+    color: $green;
   }
 }
 

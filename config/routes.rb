@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   # User can only make one session
   resource :session
 
+  # Multiple categories
+  resources :categories
 
   get "about", to: "pages#about"
 
