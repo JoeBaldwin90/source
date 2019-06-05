@@ -2,12 +2,15 @@
 
   <h1><%= @item.title %></h1>
 
-  <p>Categories:</p>
-  <p>
-    <% @item.categories.order("title asc").each do |c| %>
-      <span><%= link_to c.title, category_path(c), class: "link" %></span>
-    <% end %>
+  <!-- Custom helper to format categories -->
+  <p><strong>Categories:</strong>
+    <%= format_categories @item.categories %>
   </p>
+
+  <!-- Replaced this with custom helper -->
+  <%# @item.categories.order("title asc").each do |c| #%>
+    <!-- <span><%# link_to c.title, category_path(c), class: "link" #%></span> -->
+  <%# end %>
 
   <%= image_tag @item.image.url %>
 
