@@ -2,12 +2,21 @@
 
   <h1><%= @item.title %></h1>
 
+  <p>Categories:</p>
+  <p>
+    <% @item.categories.order("title asc").each do |c| %>
+      <span><%= link_to c.title, category_path(c), class: "link" %></span>
+    <% end %>
+  </p>
+
   <%= image_tag @item.image.url %>
 
-  <%= simple_format @item.description %>
+  <p>
+    <%= simple_format @item.description %>
+  </p>
 
   <p>
-    <%= link_to "Download photo", @item.image.url, download: true, target: "blank" %>
+    <%= link_to "Download photo", @item.image.url, download: true, target: "blank", class: "link" %>
   </p>
 
 </div>
