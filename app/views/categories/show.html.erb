@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1><%= @category.title %></h1>
+
+  <div class="items-grid">
+    <%= render partial: "items/item", collection: @category.items.all %>
+  </div>
+
+  <p>
+    <%= link_to "Back to all categories", categories_path, class: "link" %>
+  </p>
+
+
+</div>

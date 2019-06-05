@@ -23,10 +23,11 @@
 
       <nav>
         <% if is_logged_in? %>
-          <p class="nav-el">
-            Hi, <%= link_to @current_user.username, users_path, class: "link" %>!
+          <p class="nav-el white">
+            Hi, <%= link_to @current_user.username, users_path, class: "nav-link" %>
           </p>
-          <%= link_to "Gallery", items_path, class: "link nav-el active" %>
+          <%= link_to "Gallery", items_path, class: "nav-link nav-el active" %>
+          <%= link_to "Categories", categories_path, class: "nav-link nav-el" %>
           <%= link_to "Log out", session_path, class: "button nav-el", method: :delete %>
         <% else %>
           <div class="sign-up">
