@@ -47,4 +47,37 @@ class User < ApplicationRecord
     false
   end
 
+
+  def update_with_stripe(form_params)
+
+    # Update model with form_params
+    # Check if valid
+    # Update Model
+    self.assign_attributes(form_params)
+
+    if self.valid?
+      # Find subscription type from stripe's response
+      subscription = Stripe::Subscription.retrieve(self.stripe_subscription)
+
+      # Get first item from subscription_plan
+      item_id = subscription.items.data[0].id
+
+      # Make new items list
+      items = [
+        { id: item_id, plan: self.subscription_plan }
+      ]
+
+      # Update sub with new items
+      subscription.items = items
+
+      # Save new subscription data to Stripe
+      subscription.save
+
+      # Update User model with new subscription data
+      self.save
+    else
+      false
+    end
+  end
+
 end

@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   # Items controller
   resources :items
 
-  # User can sign up multiple times
+  # Users can sign up multiple times
   resources :users
 
-  # User can only make one session
+  # Users can only make one session
   resource :session
+
+  # Users can only edit one account
+  resource :account
 
   # Multiple categories
   resources :categories
