@@ -1,1 +1,1 @@
-Stripe.api_key = Rails.application.credentials.test[:stripe_secret]
+Stripe.api_key = Rails.application.credentials[Rails.env.to_sym][:stripe_secret]

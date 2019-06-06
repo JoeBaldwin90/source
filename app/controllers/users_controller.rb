@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create # This happens when user hits the submit button on the form
     @user = User.new(form_params)
-    if @user.save
+    if @user.save_and_subscribe
       # Save session with user
       session[:user_id] = @user.id
       # Let user know they've signed-up sucessfully
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def form_params
     params.require(:user).permit(:name, :username,
-      :email, :password, :password_confirmation, :subscription_plan)
+      :email, :password, :password_confirmation, :subscription_plan, :stripe_token)
   end
 
 end
