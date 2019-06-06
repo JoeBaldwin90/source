@@ -13,7 +13,18 @@ class AccountsController < ApplicationController
     else
       render "edit"
     end
+  end
 
+  def destroy
+    # Remove subscription, then delete user.
+    @current_user.unsubscribe_and_destroy
+
+    # Remove session
+    reset_session
+
+    flash[:success] = "Your account has been deleted. Goodbye, friend."
+
+    redirect_to root_path
   end
 
   def form_params

@@ -80,4 +80,15 @@ class User < ApplicationRecord
     end
   end
 
+  def unsubscribe_and_destroy
+    # Find subscription
+    subscription = Stripe::Subscription.retrieve(self.stripe_subscription)
+
+    # Delete subscription
+    subscription.delete
+
+    # Remove user completey
+    self.destroy
+  end
+
 end
