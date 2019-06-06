@@ -48,6 +48,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
 gem 'mini_magick', '~> 4.8'
 
+# Payments with stripe
+gem 'stripe'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
