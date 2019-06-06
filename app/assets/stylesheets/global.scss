@@ -28,6 +28,16 @@ h1, h2, h3 {
 
 // Page header
 header {
+  height: 72px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-box-shadow: 4px 4px 10px $black;
+          box-shadow: 4px 4px 10px $black;
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,12 +49,6 @@ header {
   justify-content: space-between;
   background: $black;
   padding: 0 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  -webkit-box-shadow: 4px 4px 10px $black;
-          box-shadow: 4px 4px 10px $black;
 }
 
 .home {
@@ -63,11 +67,13 @@ header {
 
 // Flash message styling
 .success {
-  background-color: #326686;
-  color: #fff;
-  width: 100%;
-  height: 2.5em;
-  padding: 10px;
+  display: block;
+  width: 100%;;
+  background-color: $green;
+  color: $black;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .error {
@@ -120,8 +126,8 @@ header {
 
 // Content-wrapper
 .container {
-  margin-top: 72px;
   padding: 20px;
+  margin-top: 72px;
 }
 
 .container-home {
