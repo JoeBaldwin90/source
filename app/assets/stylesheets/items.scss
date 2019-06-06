@@ -1,6 +1,22 @@
+// Search form
+.search-form {
+  padding: 15px 0;
+  text-align: left;
+}
+.search-input {
+  max-width: 300px;
+  background: $black;
+  color: $white;
+  padding: 3px 0;
+  font-size: 16px;
+  font-family: $bodyFont;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid $green;
+}
+
 // Items index page
 div.items-grid {
-  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 20px;
