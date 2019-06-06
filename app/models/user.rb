@@ -27,8 +27,11 @@ class User < ApplicationRecord
         ]
       )
 
-      # Save customer id to database
+      # Save Stripe's customer id response to User model
       self.stripe_customer = customer.id
+
+      # Save Stripe's subscription id response to User model
+      self.stripe_subscription = subscription.id
 
       # Save
       self.save

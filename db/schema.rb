@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_170820) do
+ActiveRecord::Schema.define(version: 2019_06_06_184632) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 2019_06_06_170820) do
     t.boolean "is_subscription_active", default: true
     t.string "stripe_customer"
     t.string "stripe_token"
+    t.string "stripe_subscription"
   end
 
 end
