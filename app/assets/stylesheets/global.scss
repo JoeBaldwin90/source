@@ -15,6 +15,7 @@ body {
   font-family: $bodyFont;
   line-height: 1.5;
   color: $black;
+  font-size: 16px;
 }
 
 a {
@@ -120,6 +121,7 @@ header {
 // Content-wrapper
 .container {
   margin-top: 72px;
+  padding: 20px;
 }
 
 // Form styling
