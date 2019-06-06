@@ -61,6 +61,10 @@ div.items-grid {
 div.item-page {
   img {
     max-width: 70%;
+    &:hover {
+      -webkit-filter: saturate(50%);
+              filter: saturate(50%);
+    }
   }
 
   h1, p, a {
