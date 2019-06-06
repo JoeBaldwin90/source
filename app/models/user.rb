@@ -36,6 +36,12 @@ class User < ApplicationRecord
       false
     end
 
+  rescue Stripe:: CardError => e
+    @message = e.json_body[:error][:message]
+
+    self.errors.add(:stripe_token, @message)
+
+    false
   end
 
 end

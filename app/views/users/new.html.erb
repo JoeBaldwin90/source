@@ -11,7 +11,8 @@
 
   <%= f.input :subscription_plan, as: :select, collection: [["Basic - £9.99/month", "basic"], ["Pro - £19.99/month", "pro"]], include_blank: false %>
 
-  <div id="card-errors">
+
+  <div id="card-errors"> 
    <% @user.errors[:stripe_token].each do |e| %>
      <%= e %>
    <% end %>
