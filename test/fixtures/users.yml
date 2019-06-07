@@ -4,7 +4,7 @@ joe:
   name: Joe
   username: Joe
   email: joe1@email.com
-  password_digest: User123
+  password_digest: <%= BCrypt::Password.create("User123") %>
   stripe_token: tok_mastercard # Taken from Stripe test tokens
   subscription_plan: basic
 
@@ -12,7 +12,7 @@ milan:
   name: Milan Moffatt
   username: milan
   email: milan@superhi.com
-  password_digest: password123
+  password_digest: <%= BCrypt::Password.create("User123") %>
   stripe_token: tok_chargeDeclined # Taken from Stripe test tokens
   subscription_plan: pro
 
@@ -20,6 +20,6 @@ bob:
   name: Bob Tester
   username: Bob
   email: bob@email.com
-  password_digest: password123
+  password_digest: <%= BCrypt::Password.create("User123") %>
   stripe_token: tok_visa # Taken from Stripe test tokens
   subscription_plan: basic

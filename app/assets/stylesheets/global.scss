@@ -9,6 +9,7 @@ $green: #7BBF8E;
 $darkgreen: #4D7859;;
 $black: #2E2E2E;
 $white: #F8F8F8;
+$red: #980000;
 
 // Global elements
 body {
@@ -77,7 +78,13 @@ header {
 }
 
 .error {
-
+  display: block;
+  width: 100%;;
+  background-color: $red;
+  color: $white;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 // Buttons & links

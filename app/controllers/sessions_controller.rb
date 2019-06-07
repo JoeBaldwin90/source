@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Logged in!"
       redirect_to root_path
     else
+      flash[:error] = "Wrong username and/or password"
       render "new"
     end
   end

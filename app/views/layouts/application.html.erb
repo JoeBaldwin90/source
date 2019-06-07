@@ -20,6 +20,12 @@
         </div>
       <% end %>
 
+      <% if flash[:error].present? %>
+        <div class="error">
+          <%= flash[:error] %>
+        </div>
+      <% end %>
+
       <div class="header">
         <h1>
           <%= link_to "Source", root_path, class: "home" %>
