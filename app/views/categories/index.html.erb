@@ -2,11 +2,11 @@
 
   <h1>Categories</h1>
 
-  <% @categories.each do |c| %>
-
-    <p><%= link_to c.title, category_path(c), class: "link" %></p>
-
-  <% end %>
+  <div class="categories_container">
+    <% @categories.each do |c| %>
+      <p><%= link_to c.title, category_path(c), class: "category_link" %></p>
+    <% end %>
+  </div>
 
 
 </div>

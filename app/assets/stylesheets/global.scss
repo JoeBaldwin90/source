@@ -1,16 +1,13 @@
 // Fonts: Saria / Montserrat
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,600|Saira:300,400,600&display=swap');
-
 $titleFont: "Saira";
 $bodyFont: "Montserrat"; // Extended font styles
-
 // Colors
 $green: #7BBF8E;
-$darkgreen: #4D7859;;
+$darkgreen: #4D7859;
 $black: #2E2E2E;
 $white: #F8F8F8;
 $red: #980000;
-
 // Global elements
 body {
   font-family: $bodyFont;
@@ -23,10 +20,11 @@ a {
   color: $black;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $titleFont;
 }
-
 // Page header
 header {
   height: 72px;
@@ -34,19 +32,12 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
-  -webkit-box-shadow: 4px 4px 10px $black;
-          box-shadow: 4px 4px 10px $black;
+  box-shadow: 4px 4px 10px $black;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   background: $black;
   padding: 0 20px;
@@ -65,11 +56,10 @@ header {
   margin-right: 20px;
   color: $white;
 }
-
 // Flash message styling
 .success {
   display: block;
-  width: 100%;;
+  width: 100%;
   background-color: $green;
   color: $black;
   text-align: center;
@@ -79,14 +69,13 @@ header {
 
 .error {
   display: block;
-  width: 100%;;
+  width: 100%;
   background-color: $red;
   color: $white;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
 }
-
 // Buttons & links
 .button {
   text-align: center;
@@ -97,7 +86,6 @@ header {
   margin-right: 5px;
   border: $green 2px solid;
   border-radius: 100px;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 
   &:hover {
@@ -111,6 +99,7 @@ header {
 
 .button.active {
   background-color: $green;
+
   &:hover {
     background-color: $darkgreen;
   }
@@ -118,6 +107,7 @@ header {
 
 .nav-link {
   color: $white;
+
   &:hover {
     padding-bottom: 3px;
     border-bottom: 2px solid $green;
@@ -126,11 +116,28 @@ header {
 
 .link {
   color: $black;
+
   &:hover {
     color: $green;
   }
 }
 
+.category_link {
+  padding: 2px 15px;
+  background: #999;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #eee;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #ffffff00;
+  transition: all 0.2s ease;
+  &:hover {
+    background: #888;
+    border-left: 3px solid #333;
+  }
+}
 // Content-wrapper
 .container {
   padding: 20px;
@@ -140,8 +147,8 @@ header {
 .container-home {
   margin-top: 72px;
 }
-
 // Form styling
-form, form div {
+form,
+form div {
   margin-bottom: 10px;
 }
