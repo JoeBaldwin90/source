@@ -13,6 +13,7 @@ class LoginsTest < ApplicationSystemTestCase
 
     assert_equal page.current_path, items_path
     assert_selector "div.success", text: "Logged in!"
+    take_screenshot
   end
 
   test "make sure error message shows when log-in fails" do
