@@ -1,5 +1,5 @@
 # Source
-Source is a subscription based photography website built with Ruby on Rails 5.2.3. [View the production site here](https://bit.ly/313smNR). 
+Source is a subscription based photography website built with Ruby on Rails 5.2.3. [View the production site here](https://bit.ly/313smNR). For log-in instructions, see below. 
 
 ## Goal
 To build a full-stack application with user authentication and subscription payments. 
